@@ -14,14 +14,9 @@ import java.sql.SQLException;
 public class UserList extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try (Connection connection = DbUtil.getConnection()){
             UserDao userDao = new UserDao();
             request.setAttribute("users", userDao.findAll());
             getServletContext().getRequestDispatcher("/users/list.jsp").forward(request, response);
-        } catch (SQLException e){
-            e.printStackTrace();
-        }
-
     }
 
     @Override
