@@ -1,17 +1,8 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: konrad
-  Date: 20.03.2023
-  Time: 21:03
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>footer</title>
-</head>
-<body>
+
+</div>
+<!-- End of Main Content -->
 
 <!-- Footer -->
 <footer class="sticky-footer bg-white">
@@ -71,4 +62,5 @@
 <script src="<c:url value="/theme/js/demo/chart-pie-demo.js"/>"></script>
 
 </body>
+
 </html>
