@@ -26,7 +26,6 @@ public class UserAdd extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try (Connection connection = DbUtil.getConnection()){
             String username = request.getParameter("username");
             String email = request.getParameter("email");
             String password = request.getParameter("password");
@@ -37,9 +36,5 @@ public class UserAdd extends HttpServlet {
             UserDao userDao = new UserDao();
             userDao.create(user);
             response.sendRedirect(request.getContextPath() + "/user/list");
-
-        } catch (SQLException e){
-            e.printStackTrace();
-        }
     }
 }
